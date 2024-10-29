@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        #game-over{
+            width: 30%;
+            height: 100px;
+            background-color: white;
+            display: none;
+            text-align: center;
+        }
+        
+        .myButton{
+            display: flex;
+            flex-direction: row;
+             position: absolute;
+             top: 2rem;
+             left: 2rem;
+             animation: bounce 1s;
+        }
+
+        button{
+            height: 60px;
+            width: 150px;
+            background-color: darkorange;
+            color: black;
+            font-size: 30px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 20px 20px;
+        }
+        #scoring{
+            margin-bottom: 2rem;
+            width: ;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+             top: 6rem;
+             left: 4rem;
+        }
+         .label-score{
+            padding-right: 12px;
+         }
+        
+
+        
+        @media only and screen(min-width: 1028){
+            #scoring{
+            margin-bottom: 2rem;
+            width: 20%;
+            font-size: 30px;
+            display: block;
+            position: absolute;
+             top: 10rem;
+             left: 2rem;
+
+        }
+        }
+            
+    </style>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <div class="myButton">
+        <button>Start</button>
+    <button id="quit-game" onclick="window.location.href='index.html'" onclick="quitGame()">Quit</button>
+    </div>
+    
+     <div id="scoring">
+         
+         <p class="label-score">💯 Score: <span id="score"></span></p>
+         <p class="label-highscore">
+          🥇 Highscore: <span id="highscore"></span>
+        </p>
+     </div>
+     
+    <div id="game-container">
+        <div id="game-area"></div>
+    </div>
+
+    <div id="game-over">
+        <h1>Game Over</h1>
+       
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
