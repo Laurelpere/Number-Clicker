@@ -1,7 +1,7 @@
 'use strict';
 // Select the game area
 const gameArea = document.getElementById('game-area');
-const gameWidth = 400;
+//const gameWidth = 400;
 const gameHeight = 600;
 let labelScore = document.getElementById('score');
 let labelHighscore = document.getElementById('highscore');
@@ -38,8 +38,8 @@ function createFallingNumber() {
     number.innerText = getRandomNumber(1, 99);
 
     // Start position at the bottom of the game area
-    const startX = getRandomNumber(0, gameWidth - 50);
-    number.style.left = startX + 'px';
+    //const startX = getRandomNumber(0, gameWidth - 50);
+    //number.style.left = startX + 'px';
     number.style.top = gameHeight + 'px';
 
     // Add the number to the game area
