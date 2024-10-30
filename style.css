@@ -31,7 +31,12 @@ body {
 
 
 .number {
-    position: fixed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    max-width: 50%;
     font-size: 60px;
     color: black;
     display: block;
