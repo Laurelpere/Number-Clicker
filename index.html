@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        body{
+        	background-image: linear-gradient(45deg,
+                    rgba(173, 216, 230,0.75),
+                    rgba(173, 216, 230,0.75)), 
+                      url('intro.png');
+        }
+        
+        .play{
+            height: 100px;
+            width: 300px;
+            background-color: darkorange;
+            color: black;
+            border: none;
+            font-size: 40px;
+             margin-left: auto;
+             margin-right: auto;
+             animation: bounce 1s infinite ease-in-out;
+             border-radius: 50px 50px;
+        }
+        @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at original position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up by 10px */
+    }
+}
+        
+        .intro-container{
+        	display: flex;
+        	flex-direction: column;
+        	justify-content: center;
+        }   
+        .loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+ .user{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: white;
+    padding: 6rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+ }
+ .guide{
+    display: none;
+ }
+ .help{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+  }
+  .close-modal {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: red;
+    cursor: pointer;
+    border: none;
+    background: none;
+    z-index: 10;
+  }
+  p{
+    font-size: 20px;
+    padding: 0;
+  }
+    </style>
+</head>
+<body>
+	<div class="intro-container">
+		<h1 style="font-size: 40px; text-shadow: black 2px; padding-bottom: 20px;"><span style="font-family: DynaPuff; font-weight: regular 400; color:#7062EA; background-color:#000000; padding: 7px;">Number</span> <span style="color: #EA2E34; background-color:#000000; padding: 7px;">Clicker</span> </h1>
+		<button class="play" onclick="window.location.href='playgame.html'">Let's Play</button>
+         
+         <div class="help">
+             <h2 onclick="openMode()">Help</h2>
+             <button class="close-modal guide" onclick="closeMode()">&times;</button>
+             <p class="user guide">Tap on each random number, without skipping any, game ends upon 3 missed numbers</p>
+             <div class="overlay guide" onclick="closeMode()"></div>
+         </div>
+		<div id="loader" class="loader" style="display: none;"></div>
+     
+	</div>
+     
+
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+</body>
+<script type="text/javascript">
+	document.querySelector('.play').addEventListener('click', function() {
+    // Show the loader
+    document.getElementById('loader').style.display = 'block';
+
+    // Optional: Disable the button to prevent multiple clicks
+    this.disabled = true;
+
+    // Simulate a loading process (e.g., API call)
+    setTimeout(() => {
+        hideLoader();
+    }, 3000); // Example 3-second delay
+});
+
+function hideLoader() {
+    document.getElementById('loader').style.display = 'none';
+    document.querySelector('.play').disabled = false;
+}
+
+</script>
+</html>
