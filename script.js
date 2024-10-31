@@ -69,8 +69,8 @@ function createFallingNumber() {
     // Optional: Set voice properties
     utterance.lang = 'en-US';  // Set the language
     utterance.volume = 1;      // Volume (0 to 1)
-    utterance.rate = 1.8;        // Rate (0.1 to 10)
-    utterance.pitch = 2;       // Pitch (0 to 2)
+    utterance.rate = 1;        // Rate (0.1 to 10)
+    utterance.pitch = 1;       // Pitch (0 to 2)
     
     // Speak the number
     window.speechSynthesis.speak(utterance);
@@ -106,8 +106,8 @@ if(smallScreen.matches) {
     // Optional: Set voice properties
     utterance.lang = 'en-US';  // Set the language
     utterance.volume = 1;      // Volume (0 to 1)
-    utterance.rate = 1.8;        // Rate (0.1 to 10)
-    utterance.pitch = 2;       // Pitch (0 to 2)
+    utterance.rate = 1;        // Rate (0.1 to 10)
+    utterance.pitch = 1;       // Pitch (0 to 2)
     
     // Speak the number
     window.speechSynthesis.speak(utterance);
