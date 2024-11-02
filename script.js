@@ -124,8 +124,7 @@ if (score >= stages[currentLevel].targetScore) {
     if (currentLevel >= stages.length) {
         currentLevel = 0; 
         document.querySelector('.success').classList.remove('hider');
-        const successNamer = document.querySelector('.success-namer').textContent = `Start Again`; 
-        win.style.display = "none";
+        const successNamer = document.querySelector('.success-namer').textContent = `Start Again`;
         victoryMusic = new Audio('success.mp3');
         victoryMusic.loop = false; // Loop the music
         victoryMusic.volume = 0.5; 
@@ -201,8 +200,7 @@ if (score >= stages[currentLevel].targetScore) {
     if (currentLevel >= stages.length) {
         currentLevel = 0; 
         document.querySelector('.success').classList.remove('hider');
-        const successNamer = document.querySelector('.success-namer').textContent = `Start Again`;
-        win.style.display = "none"; 
+        const successNamer = document.querySelector('.success-namer').textContent = `Start Again`; 
     victoryMusic = new Audio('success.mp3');
     victoryMusic.loop = false; // Loop the music
     victoryMusic.volume = 0.5; 
